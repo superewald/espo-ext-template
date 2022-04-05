@@ -1,0 +1,14 @@
+{
+    "name": "superewald/espo-extension-boilerplate",
+    "version": "0.0.1",
+    "author": {
+        "name": "SuperEwald",
+        "email": "code@superewald.net"
+    },
+    "devDependencies": {
+        "fs-extra": "^10.0.1",
+        "gulp": "^4.0.2",
+        "gulp-zip": "^5.1.0",
+        "zip-lib": "^0.7.3"
+    }
+}

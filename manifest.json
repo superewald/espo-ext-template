@@ -1,0 +1,5 @@
+{
+    "name": "EspoCRM Extension Boilerplate",
+    "namespace": "Espo\\Extension\\Boilerplate",
+    "author": "SuperEwald"
+}
