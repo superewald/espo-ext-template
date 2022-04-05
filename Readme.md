@@ -1,6 +1,6 @@
 A developer friendly EspoCRM extension boilerplate using docker.
 
-## use template
+## init template
 
 ```bash
 $ git clone git@github.com/superewald/espo-ext-boilerplate <YourExtension>
