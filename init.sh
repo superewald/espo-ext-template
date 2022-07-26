@@ -107,6 +107,9 @@ currentOrigin=$(git config --get remote.origin.url)
 if [[ "$currentOrigin" == *"superewald/espo-ext-template"* ]]; then
     git remote rename origin upstream
     git remote add origin "$extRepository"
+    rm ./init.sh
+    git commit -m "initial commit"
+    git push -u origin main
 fi
 
 echo ""
