@@ -1,0 +1,5 @@
+{
+    "autoloadFileList": [
+        "application/Espo/Modules/EspoExtTemplate/vendor/autoload.php"
+    ]
+}

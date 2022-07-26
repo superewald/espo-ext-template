@@ -51,8 +51,18 @@ function updateComposerInfos(config) {
         name: config.author.name,
         email: config.author.email
     }]
+    composer.autoload["psr-4"][`Espo\\Modules\\${config.module}`] = "/app"
 
     fse.writeFileSync("composer.json", JSON.stringify(composer, null, 4))
+
+    let autoloadConfig = {
+        autoLoadFileList: [
+            "application/Espo/Modules/" + config.module + "/vendor/autoload.php"
+        ]
+    }
+
+    fse.writeFileSync("app/Resources/autoload.json", JSON.stringify(autoloadConfig, null, 4))
+
     res()
 }
 
