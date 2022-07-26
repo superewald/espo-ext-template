@@ -1,7 +1,0 @@
-{
-    "version": "0.0.1",
-    "name": "EspoCRM Extension Boilerplate",
-    "description": "Developer friendly template for EspoCRM extensions.",
-    "namespace": "Espo\\Extension\\Boilerplate",
-    "author": "SuperEwald"
-}
