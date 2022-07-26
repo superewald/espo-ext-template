@@ -1,6 +1,6 @@
 const { src, dest, parallel, watch } = require('gulp');
 const fse = require('fs-extra');
-const { config, manifest } = require('../config');
+const { config, extension } = require('../config');
 const zip = require('gulp-zip')
 const zl = require('zip-lib')
 
@@ -12,19 +12,17 @@ function distribute() {
         }
 
         let dirMap = {
-            app: tmpDir + '/files/application/Espo/Modules/' + manifest.appID,
-            client: tmpDir + '/files/client/modules/' + manifest.clientID,
+            app: tmpDir + '/files/application/Espo/Modules/' + config.appID,
+            client: tmpDir + '/files/client/modules/' + config.clientID,
             scripts: tmpDir + '/files/scripts'
         }
 
         Object.entries(dirMap).forEach(dm => {
             const [dir, dist] = dm
-            console.log(dir)
-            console.log(dist)
             fse.mkdirSync(dist, {recursive: true})
             fse.copySync(`./${dir}/`, dist)
         })
-        fse.copyFileSync('manifest.json', tmpDir + '/manifest.json')
+        fse.copyFileSync('extension.json', tmpDir + '/manifest.json')
 
         // copy composer vendor
         // copy npm node_modules
