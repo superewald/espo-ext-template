@@ -1,15 +1,23 @@
-A developer friendly EspoCRM extension boilerplate using docker.
+EspoCRM extension template for easier development.
 
-## init template
+> It is recommended to use it with [espo-docker-dev] which supplies containerized espocrm environment.
+>
+> See [setup extensions]() in [espo-docker-dev] for more information.
 
-```bash
-$ git clone git@github.com/superewald/espo-ext-boilerplate <YourExtension>
-$ cd <YourExtension> && npm install
-$ gulp init
-Name: Your Extension Name
-Namespace: Your\\Extension\\Namespace
-Author: You
+## initialize
 
-Extension has been initialized!
-$ git commit -m "initial commit"
-```
+To intialize the extension do the following steps:
+
+1. clone the template: `git clone https://github.com/superewald/espo-ext-template your-extension`
+1. initialize the template: `cd your-extension && ./init.sh`
+
+## build
+
+1. `composer install`
+1. `npm install`
+1. `./build.sh` 
+
+The script will generate a zip file in the root directory ready to be deployed.
+
+[espo-docker-dev]: https://github.com/superewald/espo-docker-dev
+[setup extensions]: https://github.com/superewald/espo-docker-dev#setup-extensions
