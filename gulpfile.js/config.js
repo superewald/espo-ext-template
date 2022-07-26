@@ -1,13 +1,12 @@
 const fs = require('fs');
 
-const manifest = JSON.parse(fs.readFileSync('manifest.json'));
+const extension = JSON.parse(fs.readFileSync('extension.json'));
 
 const config = {};
 
-manifest.appID = manifest.namespace.replaceAll("\\", "")
-manifest.clientID = manifest.namespace.replaceAll("\\", "-").toLowerCase()
-
+config.appID = extension.module
+config.clientID = extension.module.replace(/[A-Z]/g, m => "-" + m.toLowerCase())
 
 exports.default = config
 exports.config = config
-exports.manifest = manifest
+exports.extension = extension

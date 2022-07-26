@@ -1,6 +1,6 @@
 {
-    "name": "superewald/espo-extension-boilerplate",
-    "description": "EspoCRM Extension Boilerplate",
+    "name": "superewald/espo-ext-template",
+    "description": "EspoCRM Extension Template",
     "authors": [
         {
             "name": "SuperEwald",
@@ -10,7 +10,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "SuperEwald\\Espo\\Boilerplate\\": "app/"
+            "Espo\\Modules\\EspoExtTemplate": "app/"
         }
     }
 }
