@@ -21,3 +21,15 @@ The script will generate a zip file in the root directory ready to be deployed.
 
 [espo-docker-dev]: https://github.com/superewald/espo-docker-dev
 [setup extensions]: https://github.com/superewald/espo-docker-dev#setup-extensions
+
+## template structure
+
+This template uses a cleaned up directory structure compared to the official espocrm extension template. Instead of alot of nested folders the template uses the following directory mapping:
+
+| template | original | description|
+|---|---|---|
+| `app/` | `files/application/Espo/Modules/<ModuleName>` | application files (php and json) |
+| `client/` | `files/client/modules/<module-name>` | client files (JS/CSS/LESS/HTML) |
+| `scripts/` | `scripts/` | extension hooks (for (un)install)|
+
+The build script creates the needed directory structure for the extension zip file. 
