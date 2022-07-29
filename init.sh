@@ -113,7 +113,6 @@ if [[ "$currentOrigin" == *"superewald/espo-ext-template"* ]]; then
     rm ./init.sh
     git add .
     git commit -m "initial commit"
-    git push -u origin main
 fi
 
 echo ""
