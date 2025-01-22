@@ -18,7 +18,7 @@ EXT_CONFIG_TPL='{
     ]
 }
 '
-
+# composer.json template
 EXT_COMPOSER_TPL='{
     "name": "%s",
     "description": "%s",
@@ -37,6 +37,7 @@ EXT_COMPOSER_TPL='{
 }
 '
 
+# package.json template
 EXT_PACKAGE_TPL='{
     "name": "%s",
     "description": "%s",
@@ -111,6 +112,7 @@ if [[ "$currentOrigin" == *"superewald/espo-ext-template"* ]]; then
     git remote rename origin upstream
     git remote add origin "$extRepository"
     rm ./init.sh ./Readme.md
+    git branch main -u origin/main
     git add .
     git commit -m "initial commit"
 fi
